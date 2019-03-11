@@ -1,7 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, json, request
+from flask.ext.mysql import MySQL
+from werkzeug import generate_password_hash, check_password_hash
+
 app = Flask(__name__)
 
-
+### Localhost for HTML ###
 @app.route("/signUp")
 def sign_up():
     return render_template("sign_up.html")
@@ -24,4 +27,17 @@ def book_flight():
 
 if __name__ == "__main__":
     app.run()
+
+### MySQL-Server connection ###
+mysql = MySQL()
+
+# MySQL configurations
+app.config['MYSQL_DATABASE_USER'] = 'jay'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'jay'
+app.config['MYSQL_DATABASE_DB'] = 'BucketList'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+mysql.init_app(app)
+
+connection = mysql.connect()
+cursor = connection.cursor()
 

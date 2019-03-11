@@ -1,0 +1,8 @@
+sudo apt install nodejs
+sudo apt install aptitude
+sudo aptitude install npm
+sudo aptitude install npm
+sudo npm install -g bower
+bower install jquery
+
+
