@@ -10,5 +10,5 @@ Starten des Servers:
 
 @ Datenbank: 
 Jeder braucht eine lokale Kopie der gesamten Datenbank, da wir ja unseren Server nur lokal hosten. Daher bitte: 
-1. MySQL installieren (siehe link in MySQL_installation.txt)
-2. jQuery installieren (auf linux wie in install_jQuery.txt oder auf Windows gehts glaub ich einfacher)
+1. SQlite installieren (siehe SQLite_installation.txt)
+
