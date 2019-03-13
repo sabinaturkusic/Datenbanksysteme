@@ -1,0 +1,15 @@
+SQLite installation on Windows: 
+	http://www.sqlitetutorial.net/download-install-sqlite/
+	https://sqlite.org/download.html
+
+SQlite installation on Ubuntu: 
+	sudo apt-get update
+	sudo apt-get install sqlite3 #install SQlite
+	sqlite3 --version #check version
+	sudo apt-get install sqlitebrowser #install gui
+
+SQLite in der Commandline: 
+	https://sqlite.org/cli.html
+
+Flask-SQlite Tutorial: 
+	https://www.tutorialspoint.com/flask/flask_sqlite.htm
