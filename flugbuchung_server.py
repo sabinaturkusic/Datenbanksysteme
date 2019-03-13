@@ -1,6 +1,6 @@
 from flask import Flask, render_template, json, request
 from flask.ext.mysql import MySQL
-from werkzeug import generate_password_hash, check_password_hash
+from Werkzeug import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
@@ -8,21 +8,31 @@ app = Flask(__name__)
 @app.route("/signUp")
 def sign_up():
     return render_template("sign_up.html")
+    # add server-db interaction code
 
 
 @app.route("/logIn")
 def log_in():
     return render_template("log_in.html")
+# add server-db interaction code
+    # read values
+    # validate values
 
 
 @app.route("/chooseDate")
 def choose_date():
     return render_template("choose_date.html")
+# add server-db interaction code
+    # read values
+    # validate values
 
 
 @app.route("/bookFlight")
 def book_flight():
     return render_template("book_flight.html")
+# add server-db interaction code
+    # read values
+    # validate values
 
 
 if __name__ == "__main__":
