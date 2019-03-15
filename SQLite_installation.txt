@@ -10,6 +10,8 @@ SQlite installation on Ubuntu:
 
 SQLite in der Commandline: 
 	https://sqlite.org/cli.html
+	https://www.sqlite.org/lang.html
+	https://alvinalexander.com/android/sqlite-script-read-execute-how
 
 Flask-SQlite Tutorial: 
 	https://www.tutorialspoint.com/flask/flask_sqlite.htm
