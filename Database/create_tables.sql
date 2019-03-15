@@ -5,7 +5,8 @@ CREATE TABLE Person(
   Address TEXT, --oder Straße, Hausnummer
   PostCode INTEGER,
   Location TEXT,
-  PRIMARY KEY (SSN));
+  PRIMARY KEY (SSN)
+);
 
 CREATE TABLE has_phoneNumber(
   SSN INTEGER,
@@ -21,12 +22,13 @@ CREATE TABLE Staff_has_bank_account(
   BankCode INTEGER NOT NULL,
   Balance REAL,
   BankName TEXT,
-  PRIMARY KEY (StaffID, SSN)
+  PRIMARY KEY (StaffID, SSN),
+  FOREIGN KEY (SSN) REFERENCES Person(SSN)
 );
 
 CREATE TABLE Passenger(
   SSN INTEGER NOT NULL,
-  PassengerID INTEGER NOT NULL,
+  PassengerID INTEGER,
   PRIMARY KEY (PassengerID, SSN),
   FOREIGN KEY (SSN) REFERENCES Person(SSN)
 );
@@ -40,16 +42,16 @@ CREATE TABLE Pilot(
 );
 
 CREATE TABLE Producer(
-  ProducerName TEXT PRIMARY KEY
+  ProducerName TEXT,
+  PRIMARY KEY (ProducerName)
 );
 
-
-CREATE TABLE PLaneType(
+CREATE TABLE PlaneType_made_by(
   TypeNumber INTEGER,
   Seats INTEGER,
-  FlightAttendantsNumber INTEGER,
+  FlightAttendantNumber INTEGER,
   TextualTypeDescription TEXT,
-  ProducerName TEXT,
+  ProducerName TEXT NOT NULL,
   PRIMARY KEY (TypeNumber),
   FOREIGN KEY (ProducerName) REFERENCES Producer(ProducerName)
 );
@@ -61,19 +63,18 @@ CREATE TABLE Engineer_services(
   TypeNumber INTEGER,
   PRIMARY KEY (LicenceNumber, StaffID),
   FOREIGN KEY (StaffID) REFERENCES Staff_has_bank_account(StaffID),
-  FOREIGN KEY (TypeNumber) REFERENCES PLaneType(TypeNumber)
+  FOREIGN KEY (TypeNumber) REFERENCES PlaneType_made_by(TypeNumber)
 );
 
 CREATE TABLE Plane_has_BlackBox_borrowed_by(
-  TypeNUmber INTEGER NOT NULL,
+  TypeNumber INTEGER NOT NULL,
   InventoryNumber INTEGER,
   FlightHours REAL,
   ProductionYear INTEGER,
   BackBoxCode INTEGER,
   StaffID INTEGER,
-  PRIMARY KEY (InventoryNumber),
-  PRIMARY KEY (BackBoxCode),
-  FOREIGN KEY (TypeNUmber) REFERENCES PLaneType(TypeNumber),
+  PRIMARY KEY (InventoryNumber, BackBoxCode),
+  FOREIGN KEY (TypeNumber) REFERENCES PlaneType_made_by(TypeNumber),
   FOREIGN KEY (StaffID) REFERENCES Staff_has_bank_account(StaffID)
 );
 
@@ -83,7 +84,8 @@ CREATE TABLE Flight(
   TargetAirport TEXT,
   DepartureTime time,
   ArrivalTime time,
-  Date date INTEGER NOT NULL,
+  Date date,
+  Price REAL,
   PRIMARY KEY (FlightNumber, Date)
 );
 
@@ -93,10 +95,11 @@ CREATE TABLE books(
   Date date NOT NULL,
   BookingDate date,
   Class INTEGER,
-  BookingNUmber INTEGER NOT NULL,
+  BookingNumber INTEGER UNIQUE NOT NULL, --Autoincrement?
+  MailAddress TEXT,
   PRIMARY KEY (FlightNumber, Date, PassengerID),
   FOREIGN KEY (PassengerID) REFERENCES Passenger(PassengerID),
-  FOREIGN KEY (FlightNumber, Date) references Flight(FlightNumber, Date)
+  FOREIGN KEY (FlightNumber, Date) REFERENCES Flight(FlightNumber, Date)
 );
 
 CREATE TABLE waits_for(
@@ -114,7 +117,7 @@ CREATE TABLE flies_with(
   FlightNumber TEXT,
   Date date,
   InventoryNumber INTEGER,
-  PRIMARY KEY (PilotLicenceNumber, FlightNumber, Datum, InventoryNumber),
+  PRIMARY KEY (PilotLicenceNumber, FlightNumber, Date, InventoryNumber),
   FOREIGN KEY (PilotLicenceNumber) REFERENCES Pilot(PilotLicenceNumber),
   FOREIGN KEY (FlightNumber, Date) REFERENCES Flight(FlightNumber, Date),
   FOREIGN KEY (InventoryNumber) REFERENCES Plane_has_BlackBox_borrowed_by(InventoryNumber)
