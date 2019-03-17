@@ -5,31 +5,31 @@ app = Flask(__name__)
 
 
 ### Localhost for HTML ###
-@app.route("/signUp")
-def sign_up():
-    return render_template("sign_up.html")
+@app.route("/startSite")
+def start_site():
+    return render_template("start_site_1.html")
     # add server-db interaction code
 
 
-@app.route("/logIn")
-def log_in():
-    return render_template("log_in.html")
+@app.route("/chooseFlight")
+def choose_flight():
+    return render_template("choose_flight_2.html")
 # add server-db interaction code
     # read values
     # validate values
 
 
-@app.route("/chooseDate")
-def choose_date():
-    return render_template("choose_date.html")
+@app.route("/passengers")
+def passengers():
+    return render_template("passengers_3.html")
 # add server-db interaction code
     # read values
     # validate values
 
 
-@app.route("/bookFlight")
-def book_flight():
-    return render_template("book_flight.html")
+@app.route("/confirmation")
+def confirmation():
+    return render_template("confirmation_4.html")
 # add server-db interaction code
     # read values
     # validate values

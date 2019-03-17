@@ -1,3 +1,5 @@
+Nicht mehr aktuell
+
 sudo apt install nodejs
 sudo apt install aptitude
 sudo aptitude install npm
