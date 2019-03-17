@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
-# import sqlite3
+from flask import Flask, render_template, request, g
+import sqlite3
 
 app = Flask(__name__)
+
 
 ### Localhost for HTML ###
 @app.route("/signUp")
@@ -38,5 +39,9 @@ if __name__ == "__main__":
     app.run()
 
 ### SQlite-Server connection ###
-# conn = sqlite3.connect()
+Database = "airline_database.db"
+conn = sqlite3.connect(Database)
+
+# add data from form
+
 
