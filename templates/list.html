@@ -1,0 +1,53 @@
+<!doctype html>
+      <form action = "{{ url_for('addrec') }}" method = "POST">
+         <h3>Passenger Information</h3>
+
+          SSN
+          <input type = "text" name = "SSN" /></br>
+
+          First Name
+          <input type = "text" name = "first name" /></br>
+
+          Last Name
+          <input type = "text" name = "last name" /></br>
+
+          Address<br>
+          <textarea name = "address" ></textarea><br>
+
+          Postcode
+          <input type = "text" name = "post code" /></br>
+
+          Location<br>
+          <input type = "text" name = "location" /><br>
+
+         <input type = "submit" value = "submit" /><br>
+      </form>
+
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>SSN</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Address</td>
+            <td>Post Code</td>
+            <td>location</td>
+         </thead>
+
+          (SSN, first_name, last_name, address, postcode, location)
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["first_name"]}}</td>
+               <td>{{row["last_name"]}}</td>
+               <td> {{ row["address"]}}</td>
+               <td>{{row['postcode']}}</td>
+                <td>{{row['location']}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>

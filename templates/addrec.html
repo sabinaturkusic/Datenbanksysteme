@@ -1,0 +1,27 @@
+<html>
+   <body>
+      <form action = "{{ url_for('addrec') }}" method = "POST">
+         <h3>Passenger Information</h3>
+
+          SSN
+          <input type = "text" name = "SSN" /></br>
+
+          First Name
+          <input type = "text" name = "first name" /></br>
+
+          Last Name
+          <input type = "text" name = "last name" /></br>
+
+          Address<br>
+          <textarea name = "address" ></textarea><br>
+
+          Postcode
+          <input type = "text" name = "post code" /></br>
+
+          Location<br>
+          <input type = "text" name = "location" /><br>
+
+         <input type = "submit" value = "submit" /><br>
+      </form>
+   </body>
+</html>

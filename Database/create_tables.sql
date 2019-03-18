@@ -71,9 +71,9 @@ CREATE TABLE Plane_has_BlackBox_borrowed_by(
   InventoryNumber INTEGER,
   FlightHours REAL,
   ProductionYear INTEGER,
-  BackBoxCode INTEGER,
+  BlackBoxCode INTEGER,
   StaffID INTEGER,
-  PRIMARY KEY (InventoryNumber, BackBoxCode),
+  PRIMARY KEY (InventoryNumber, BlackBoxCode),
   FOREIGN KEY (TypeNumber) REFERENCES PlaneType_made_by(TypeNumber),
   FOREIGN KEY (StaffID) REFERENCES Staff_has_bank_account(StaffID)
 );
