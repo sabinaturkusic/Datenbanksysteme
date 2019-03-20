@@ -1,17 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--head - defined charset, title and linked css file-->
     <head>
         <meta charset="UTF-8">
         <title>Welcome to Genome Air - Please choose a date</title>
         <link href="genome_air.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     </head>
+    <!--body - page content-->
+    <body>
+        <!--div for header-->
+        <div>
+            <h1 class="title">Genome Air</h1>
+        </div>
+        <div>
+        <!--from-to - select airport from dropdown - interaction with DATABASE-->
+            <section class="from-to">
+            <!--with method POST, submit to chosen page-->
+                <div class="bootstrap-iso">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <br/>
+                 <form action="choose_flight_2.html" method="GET">
+                    <label for="departAirport">Depart from: </label>
+                    <select id="departAirport" name="departAirport" required>
+                        <option value="vienna">VIE</option>
+                        <option value="madrid">MAD</option>
+                        <option value="berlin">BER</option>
+                        <option value="paris">CDG</option>
+                    </select>
+                    <label for="returnAirport">Arrive to: </label>
+                    <select id="returnAirport" name="returnAirport" required>
+                        <option value="vienna">VIE</option>
+                        <option value="madrid">MAD</option>
+                        <option value="berlin">BER</option>
+                        <option value="paris">CDG</option>
+                    </select>
+                 </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--select date from date picker-->
+            <section class="chooseDate">
+                <div class="bootstrap-iso">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                <!--<form action="#choose_out_flight" method="GET">-->
+                    <form action="choose_flight_2.html" method="GET">
+                    <div class="form-group"> <!-- Date input -->
+                        <label class="control-label" for="departDate">Date of departure: </label>
+                        <input class="form-control" id="departDate" name="departDate" required placeholder="MM/DD/YYY" type="date"/>
+                    </div>
+                    <div class="form-group"> <!-- Date input -->
+                        <label class="control-label" for="returnDate">Date of return: </label>
+                        <input class="form-control" id="returnDate" name="returnDate"  required placeholder="MM/DD/YYY" type="date"/>
+                    </div>
+                </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <!--passengers - counter-->
+            <section class="passengers">
+                <div class="bootstrap-iso">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                <form action="choose_flight_2.html" method="GET">
+                    <label class="passengers" for="passengerNumber">Number of Passengers: </label>
+                    <input id="passengerNumber" name="number" type="number" min="1" max="5" step="1" required>
+                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--start search for flight - interaction with DATABASE-->
+            <section class="startSearch">
+                <div class="bootstrap-iso">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                <form action="choose_flight_2.html" method="GET">
+                    <div class="form-group"> <!-- Submit button -->
+                        <button class="btn btn-primary " name="submit" type="submit" formtarget="_self">Search flight</button>
+                    </div>
+                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+            <footer class="footer">
+                <p>&copy; Genome Air 2019</p>
+            </footer>
+        </div>
+    </body>
+</html>
+
 <!--
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 -->
 
-<body>
+<!--<body>
     <div class="container">
         <div class="header">
             <nav>
@@ -20,8 +123,8 @@
                     </li>
                     <li role="presentation"><a href="#">Sign In</a>
                     </li>
-                   <!-- <li role="presentation"><a href="showSignUp">Sign Up</a>
-                    </li>-->
+                    <li role="presentation"><a href="showSignUp">Sign Up</a>
+                    </li>
                 </ul>
             </nav>
             <h3 class="text-muted">Das ist ein Test</h3>
@@ -30,8 +133,8 @@
         <div class="jumbotron">
             <h1>Jetzt buchen</h1>
             <p class="lead"></p>
-            <!--<p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
-            </p>-->
+            <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
+            </p>
         </div>
 
         <div class="row marketing">
@@ -47,6 +150,4 @@
         </footer>
 
     </div>
-</body>
-
-</html>
+</body>-->
