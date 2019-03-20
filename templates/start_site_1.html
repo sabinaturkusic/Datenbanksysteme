@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <br/>
-                 <form action="choose_flight_2.html" method="GET">
+                 <form action="choose_flight_2.html" method="POST">
                     <label for="departAirport">Depart from: </label>
                     <select id="departAirport" name="departAirport" required>
                         <option value="vienna">VIE</option>
@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                 <!--<form action="#choose_out_flight" method="GET">-->
-                    <form action="choose_flight_2.html" method="GET">
+                    <form action="choose_flight_2.html" method="POST">
                     <div class="form-group"> <!-- Date input -->
                         <label class="control-label" for="departDate">Date of departure: </label>
                         <input class="form-control" id="departDate" name="departDate" required placeholder="MM/DD/YYY" type="date"/>
@@ -74,7 +74,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                <form action="choose_flight_2.html" method="GET">
+                <form action="choose_flight_2.html" method="POST">
                     <label class="passengers" for="passengerNumber">Number of Passengers: </label>
                     <input id="passengerNumber" name="number" type="number" min="1" max="5" step="1" required>
                 </form>
@@ -89,7 +89,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                <form action="choose_flight_2.html" method="GET">
+                <form action="choose_flight_2.html" method="POST">
                     <div class="form-group"> <!-- Submit button -->
                         <button class="btn btn-primary " name="submit" type="submit" formtarget="_self">Search flight</button>
                     </div>

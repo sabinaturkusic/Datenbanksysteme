@@ -4,6 +4,8 @@ import sqlite3
 
 app = Flask(__name__)
 
+DATABASE = 'airline_database.db'
+
 
 ### Localhost for HTML ###
 @app.route("/startSite")
@@ -12,28 +14,28 @@ def start_site():
     # add server-db interaction code
 
 
-@app.route('/result',methods = ['POST', 'GET'])
+@app.route('/choose_flight_2.html',methods = ['POST', 'GET'])
 def departairport():
     if request.method == 'GET':
         depart_airport = request.form["departAirport"]
         return render_template("choose_flight_2", depart_airport=depart_airport)
 
 
-@app.route('/result',methods = ['POST', 'GET'])
+@app.route('/choose_flight_2.html',methods = ['POST', 'GET'])
 def returnairport():
     if request.method == 'GET':
         return_airport = request.form["returnAirport"]
         return render_template("choose_flight_2", return_airport=return_airport)
 
 
-@app.route('/result',methods = ['POST', 'GET'])
+@app.route('/choose_flight_2.html',methods = ['POST', 'GET'])
 def departdate():
     if request.method == 'GET':
         depart_date = request.form["departDate"]
         return render_template("choose_flight_2", depart_date=depart_date)
 
 
-@app.route('/result', methods=['POST', 'GET'])
+@app.route('/choose_flight_2.html', methods=['POST', 'GET'])
 def returndate():
     if request.method == 'GET':
         return_date = request.form["returnDate"]
@@ -71,7 +73,7 @@ def confirmation():
 
 
 ### this is a test ###
-conn = sqlite3.connect("airline_database.db")
+conn = sqlite3.connect(DATABASE)
 sql = sqlite3
 
 
@@ -92,14 +94,14 @@ def addrec():
             postcode = request.values.get('post code', type=int)
             location = request.values.get('location')
 
-            con = sqlite3.connect("airline_database.db")
+            con = sqlite3.connect(DATABASE)
             con.row_factory = sqlite3.Row
             cur = con.cursor()
             cur.execute("SELECT MAX(SSN) FROM Person;")
             SSN = cur.fetchone()[0] + 1
             con.close()
 
-            with sql.connect("airline_database.db") as con:
+            with sql.connect(DATABASE) as con:
                 cur = con.cursor()
                 cur.execute("INSERT INTO Person VALUES (?, ?, ?, ?, ?, ?);",
                             (SSN, first_name, last_name, address, postcode, location))
@@ -117,7 +119,7 @@ def addrec():
 # Zeigt alle Einträge zu person an
 @app.route('/list')
 def list():
-    con = sql.connect("airline_database.db")
+    con = sql.connect(DATABASE)
     con.row_factory = sql.Row
 
     cur = con.cursor()
@@ -137,6 +139,4 @@ if __name__ == "__main__":
     app.run()
 
 ### SQlite-Server connection ###
-Database = "airline_database.db"
-
 cursor = get_db().cusor()

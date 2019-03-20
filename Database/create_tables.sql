@@ -1,16 +1,15 @@
 CREATE TABLE Person(
-  SSN INTEGER AUTOINCREMENT,
-  FirstName TEXT,
-  LastName TEXT,
+  SSN INTEGER PRIMARY KEY AUTOINCREMENT,
+  FirstName TEXT NOT NULL,
+  LastName TEXT NOT NULL,
   Address TEXT, --oder Straße, Hausnummer
   PostCode INTEGER,
-  Location TEXT,
-  PRIMARY KEY (SSN)
+  Location TEXT
 );
 
 CREATE TABLE has_phoneNumber(
   SSN INTEGER,
-  PhoneNumber INTEGER,
+  PhoneNumber TEXT,
   PRIMARY KEY (SSN, PhoneNumber),
   FOREIGN KEY (SSN) REFERENCES Person (SSN)
 );
