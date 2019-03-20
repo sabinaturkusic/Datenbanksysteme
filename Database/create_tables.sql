@@ -1,5 +1,5 @@
 CREATE TABLE Person(
-  SSN INTEGER,
+  SSN INTEGER AUTOINCREMENT,
   FirstName TEXT,
   LastName TEXT,
   Address TEXT, --oder Straße, Hausnummer

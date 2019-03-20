@@ -47,21 +47,29 @@ conn = sqlite3.connect("airline_database.db")
 sql = sqlite3
 
 
+# display html fom
 @app.route("/test")
 def retrieve_from_data():
-    return render_template("addrec.html")
+    return render_template("add_to_db.html")
 
 
-@app.route('/addrec', methods=['POST', 'GET'])
+# add to database from html
+@app.route('/addToDB', methods=['POST', 'GET'])
 def addrec():
     if request.method == 'POST':
         try:
-            SSN = request.form.get('SSN', type=int)
             first_name = request.values.get('first name')
             last_name = request.values.get('last name')
             address = request.values.get('address')
             postcode = request.values.get('post code', type=int)
             location = request.values.get('location')
+
+            con = sqlite3.connect("airline_database.db")
+            con.row_factory = sqlite3.Row
+            cur = con.cursor()
+            cur.execute("SELECT MAX(SSN) FROM Person;")
+            SSN = cur.fetchone()[0] + 1
+            con.close()
 
             with sql.connect("airline_database.db") as con:
                 cur = con.cursor()
@@ -69,8 +77,8 @@ def addrec():
                             (SSN, first_name, last_name, address, postcode, location))
                 con.commit()
                 msg = "Record successfully added"
+
         except Exception as e:
-            print("in rollback" + str(e))
             con.rollback()
             msg = "error in insert operation"
 
@@ -78,7 +86,7 @@ def addrec():
             return render_template("result.html", msg=msg)
             con.close()
 
-
+# Zeigt alle Einträge zu person an
 @app.route('/list')
 def list():
     con = sql.connect("airline_database.db")
@@ -91,7 +99,7 @@ def list():
     return render_template("list.html", rows=rows)
 
 
-# @app.route('/home')
+# @app.route('/')
 # def retrieve_from_data():
 #     return render_template("home.html")
 
