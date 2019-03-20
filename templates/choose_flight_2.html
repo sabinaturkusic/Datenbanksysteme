@@ -4,16 +4,120 @@
     <meta charset="UTF-8">
     <title>Please choose a flight</title>
     <link href="genome_air.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 </head>
  
- <!--
+ <body>
+    <div>
+        <h1 class="title">Genome Air</h1>
+    </div>
+    <!--<div id="data">
+        <script language="JavaScript">
+            function processForm()
+            {
+                var parameters = location.search.substring(1).split("&");
+                var temp = parameters[0].split("=");
+                l = unescape(temp[1]);
+                document.getElementById("data").innerHTML = l;
+            }
+            processForm();
+        </script>
+    <div>-->
+        <!--date departure-->
+        <section class="departureDate">
+            <div class="bootstrap-iso">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <br/>
+                            <p>Departure Date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="departureFlights">
+            <!--list with departure flights - radio form, only one can be selected-->
+            <div class="bootstrap-iso">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <span>Please select a flight: </span>
+                            <br>
+                            <input type="radio" id="vie-mad01" name="departure" value="yes">
+                            <label for="vie-mad01">VIE - MAD ------- 07:00 - 10:00 ------- GA001</label>
+                            <br/>
+                            <input type="radio" id="vie-mad02" name="departure" value="no">
+                            <label for="vie-mad02">VIE - MAD ------- 14:30 - 17:30 ------- GA002</label>
+                            <br/>
+                            <input type="radio" id="vie-mad03" name="departure" value="yes">
+                            <label for="vie-mad03">VIE - MAD ------- 19:00 - 22:00 ------- GA003</label>
+                            <!--<input type="radio" id="mad-cdg" name="departure" value="yes">
+                            <label for="mad-cdg">MAD - CDG</label>
+                            <input type="radio" id="ber-cdg" name="departure" value="yes">
+                            <label for="ber-cdg">BER - CDG</label>
+                            <input type="radio" id="ber-mad" name="departure" value="yes">
+                            <label for="ber-mad">BER - MAD</label>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="returnDate">
+            <div class="bootstrap-iso">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p>Please select a flight: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="returnFlights">
+            <div class="bootstrap-iso">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <span>Please select a flight: </span>
+                            <br>
+                            <input type="radio" id="mad-vie01" name="departure" value="yes">
+                            <label for="mad-vie01">MAD - VIE ------- 06:00 - 09:00 ------- GA001</label>
+                            <br/>
+                            <input type="radio" id="mad-vie02" name="departure" value="no">
+                            <label for="mad-vie02">MAD - VIE ------- 15:00 - 18:00 ------- GA002</label>
+                            <br/>
+                            <input type="radio" id="mad-vie03" name="departure" value="yes">
+                            <label for="mad-vie03">MAD - VIE ------- 19:30 - 22:35 ------- GA003</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <div>
+
+
+    </div>
+
+    <div>
+        <footer class="footer">
+            <p>&copy; Genome Air 2019</p>
+        </footer>
+    </div>
+</body>
+ </html>
+
+<!--
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
- 
+
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
- -->
- 
+
+
 <body>
- 
+
     <div class="container">
         <div class="header">
             <nav>
@@ -22,33 +126,24 @@
                     </li>
                     <li role="presentation"><a href="#">Sign In</a>
                     </li>
-                    <!--<li role="presentation"><a href="showSignUp">Sign Up</a>
-                    </li>-->
+                    <li role="presentation"><a href="showSignUp">Sign Up</a>
+                    </li>
                 </ul>
             </nav>
             <h3 class="text-muted">Das ist ein Test</h3>
         </div>
- 
+
         <div class="jumbotron">
             <h1>Bioinf Airlines</h1>
             <p class="lead"></p>
-            <!--<p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
-            </p>-->
+            <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
+            </p>
         </div>
- 
+
         <div class="row marketing">
             <div class="col-lg-6">
                 <h4>Gewählte Flüge</h4>
                 <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
             </div>
-        </div>
- 
-        <footer class="footer">
-            <p>&copy; Company 2015</p>
-        </footer>
- 
-    </div>
-</body>
- 
-</html>
+        </div>-->
