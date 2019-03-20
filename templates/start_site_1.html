@@ -26,15 +26,15 @@
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <br/>
                  <form action="choose_flight_2.html" method="GET">
-                    <label for="airportDepart">Depart from: </label>
-                    <select id="airportDepart" name="depart">
+                    <label for="departAirport">Depart from: </label>
+                    <select id="departAirport" name="departAirport" required>
                         <option value="vienna">VIE</option>
                         <option value="madrid">MAD</option>
                         <option value="berlin">BER</option>
                         <option value="paris">CDG</option>
                     </select>
-                    <label for="airportArrive">Arrive to: </label>
-                    <select id="airportArrive" name="arrive">
+                    <label for="returnAirport">Arrive to: </label>
+                    <select id="returnAirport" name="returnAirport" required>
                         <option value="vienna">VIE</option>
                         <option value="madrid">MAD</option>
                         <option value="berlin">BER</option>
@@ -55,28 +55,14 @@
                 <!--<form action="#choose_out_flight" method="GET">-->
                     <form action="choose_flight_2.html" method="GET">
                     <div class="form-group"> <!-- Date input -->
-                        <label class="control-label" for="outwardDate">Date of departure: </label>
-                        <input class="form-control" id="outwardDate" name="date" placeholder="MM/DD/YYY" type="date"/>
+                        <label class="control-label" for="departDate">Date of departure: </label>
+                        <input class="form-control" id="departDate" name="departDate" required placeholder="MM/DD/YYY" type="date"/>
                     </div>
                     <div class="form-group"> <!-- Date input -->
                         <label class="control-label" for="returnDate">Date of return: </label>
-                        <input class="form-control" id="returnDate" name="date" placeholder="MM/DD/YYY" type="date"/>
+                        <input class="form-control" id="returnDate" name="returnDate"  required placeholder="MM/DD/YYY" type="date"/>
                     </div>
                 </form>
-                               <!-- <div id="choose_out_flight">     ###trying to pass values to other page
-                                    <div id="data"></div>
-                                </div>
-                                <script language="JavaScript">
-                                    function processForm()
-                                    {
-                                        var parameters = location.search.substring(1).split("&");
-                                        var temp = parameters[0].split("=");
-                                        l = unescape(temp[1]);
-                                        document.getElementById("data").innerHTML = l;
-                                    }
-                                    processForm();
-                                </script>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -90,7 +76,7 @@
                             <div class="col-md-6 col-sm-6 col-xs-12">
                 <form action="choose_flight_2.html" method="GET">
                     <label class="passengers" for="passengerNumber">Number of Passengers: </label>
-                    <input id="passengerNumber" name="number" type="number" min="1" max="5" step="1">
+                    <input id="passengerNumber" name="number" type="number" min="1" max="5" step="1" required>
                 </form>
                             </div>
                         </div>
