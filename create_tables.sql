@@ -10,7 +10,7 @@ CREATE TABLE Person(
 
 CREATE TABLE has_phoneNumber(
   SSN INTEGER,
-  PhoneNumber INTEGER,
+  PhoneNumber TEXT,
   PRIMARY KEY (SSN, PhoneNumber),
   FOREIGN KEY (SSN) REFERENCES Person (SSN)
 );
