@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>search flight</title>
+    <link href="./static/css/airline_style.css" type="text/css" rel="stylesheet">
+    <title>GenomeAir - search flight</title>
 </head>
 
 <body>
@@ -20,11 +21,16 @@
         <input type="date" name="flightDate" required/></br><br>
 
         Passagieranzahl: </br>
-        <input type="number" name="passengerNumber" required/></br><br>
+        <input type="number" name="passengerNumber" min="1" max="6" required/></br><br>
 
        </p>
 
          <input type = "submit" value = "submit" /></br><br>
       </form>
+    <div>
+        <footer class="footer">
+            <p>&copy; GenomeAir 2019</p>
+        </footer>
+    </div>
 </body>
 </html>

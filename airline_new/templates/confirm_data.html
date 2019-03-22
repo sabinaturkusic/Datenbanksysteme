@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link href="./static/css/airline_style.css" type="text/css" rel="stylesheet">
+    <title>GenomeAir - data confirmation</title>
 </head>
 <body>
     <form action = "{{ url_for('book_flight') }}" method = "POST">
@@ -28,8 +29,12 @@
 
         <input type="checkbox" value="Confirm Data" required> Daten bestätigen!<br>
         <br>
-        <input type="submit" value="Buchen!" >
+        <input type="submit" value="Jetzt Kaufen!" >
     </form>
-
+    <div>
+        <footer class="footer">
+            <p>&copy; GenomeAir 2019</p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,0 +1,29 @@
+/*#company {
+    font-family: Courier; */
+
+
+.home {
+    font-family: Courier;
+    font-size: 50px;
+    color: darkblue;
+    text-align: center;
+}
+
+
+body{
+    background-color: lightblue;
+}
+
+form {
+    font-size: 20px;
+    font-family: "Franklin Gothic Demi";
+    color: black;
+}
+
+h1{
+    font-family: Papyrus;
+}
+
+image {
+
+}
