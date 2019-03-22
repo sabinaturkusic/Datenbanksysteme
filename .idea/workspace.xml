@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b7b06f-5812-477d-900e-94e2a93f6550" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/airline_new/static/css/airline_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline_new/templates/book_flight.html" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/templates/book_flight.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline_new/templates/confirm_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/templates/confirm_data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline_new/templates/get_flight.html" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/templates/get_flight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline_new/static/css/airline_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/static/css/airline_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/airline_new/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline_new/templates/passenger_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/templates/passenger_data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/airline_new/templates/search_flight.html" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/templates/search_flight.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/backgound.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/static/css/backgound.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/airline_new/static/css/logo.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/airline_new/static/css/airline_style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="380">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -33,10 +27,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/airline_new/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="247">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
               <folding>
-                <element signature="e#376#382#0" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,32 +40,7 @@
         <entry file="file://$PROJECT_DIR$/airline_new/templates/book_flight.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding>
-                <element signature="e#190#196#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/airline_new/templates/confirm_data.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-              <folding>
-                <element signature="e#290#296#0" expanded="true" />
-                <element signature="e#311#317#0" expanded="true" />
-                <element signature="e#317#323#0" expanded="true" />
-                <element signature="e#329#335#0" expanded="true" />
-                <element signature="e#524#530#0" expanded="true" />
-                <element signature="e#536#542#0" expanded="true" />
-                <element signature="e#1099#1105#0" expanded="true" />
-                <element signature="e#1105#1111#0" expanded="true" />
-                <element signature="e#1111#1117#0" expanded="true" />
-                <element signature="e#1117#1123#0" expanded="true" />
-                <element signature="e#1547#1553#0" expanded="true" />
-              </folding>
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -81,22 +50,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
               <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-              <folding>
-                <element signature="e#746#752#0" expanded="true" />
-                <element signature="e#752#758#0" expanded="true" />
-                <element signature="e#758#764#0" expanded="true" />
-                <element signature="e#764#770#0" expanded="true" />
-                <element signature="e#839#845#0" expanded="true" />
-                <element signature="e#845#851#0" expanded="true" />
-                <element signature="e#851#857#0" expanded="true" />
-                <element signature="e#978#984#0" expanded="true" />
-                <element signature="e#984#990#0" expanded="true" />
-                <element signature="e#990#996#0" expanded="true" />
-                <element signature="e#1061#1067#0" expanded="true" />
-                <element signature="e#1067#1073#0" expanded="true" />
-                <element signature="e#1073#1079#0" expanded="true" />
-                <element signature="e#1466#1472#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -104,11 +57,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/airline_new/templates/search_flight.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-              <folding>
-                <element signature="e#743#749#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="551">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/airline_new/templates/confirm_data.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -194,10 +153,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="927" />
+    <option name="y" value="27" />
+    <option name="width" value="917" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
@@ -398,12 +357,14 @@
       <option name="presentableId" value="Default" />
       <updated>1553092663345</updated>
       <workItem from="1553259002020" duration="822000" />
-      <workItem from="1553259841793" duration="4363000" />
+      <workItem from="1553259841793" duration="5728000" />
+      <workItem from="1553265602941" duration="1319000" />
+      <workItem from="1553266955635" duration="1880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5185000" />
+    <option name="totallyTimeSpent" value="9749000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -415,10 +376,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="27" width="917" height="1053" extended-state="4" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8681507" visible="true" weight="0.12349727" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8681507" weight="0.25" />
       <window_info id="Structure" order="1" sideWeight="0.13184932" side_tool="true" weight="0.12349727" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -438,12 +398,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8681507" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8681507" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" sideWeight="0.13184932" side_tool="true" weight="0.12349727" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40928724" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4136069" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -452,6 +412,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.36933047" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -542,26 +503,24 @@
     <entry file="file://$PROJECT_DIR$/templates/genome_air.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/airline_new/templates/book_flight.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/airline_new/templates/get_flight.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="e#746#752#0" expanded="true" />
-            <element signature="e#752#758#0" expanded="true" />
-            <element signature="e#758#764#0" expanded="true" />
-            <element signature="e#764#770#0" expanded="true" />
-            <element signature="e#839#845#0" expanded="true" />
-            <element signature="e#845#851#0" expanded="true" />
-            <element signature="e#851#857#0" expanded="true" />
-            <element signature="e#978#984#0" expanded="true" />
-            <element signature="e#984#990#0" expanded="true" />
-            <element signature="e#990#996#0" expanded="true" />
-            <element signature="e#1061#1067#0" expanded="true" />
-            <element signature="e#1067#1073#0" expanded="true" />
-            <element signature="e#1073#1079#0" expanded="true" />
-            <element signature="e#1466#1472#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/airline_new/templates/confirm_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -574,58 +533,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/airline_new/templates/search_flight.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#743#749#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/airline_new/templates/book_flight.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding>
-            <element signature="e#190#196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/airline_new/templates/confirm_data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="e#290#296#0" expanded="true" />
-            <element signature="e#311#317#0" expanded="true" />
-            <element signature="e#317#323#0" expanded="true" />
-            <element signature="e#329#335#0" expanded="true" />
-            <element signature="e#524#530#0" expanded="true" />
-            <element signature="e#536#542#0" expanded="true" />
-            <element signature="e#1099#1105#0" expanded="true" />
-            <element signature="e#1105#1111#0" expanded="true" />
-            <element signature="e#1111#1117#0" expanded="true" />
-            <element signature="e#1117#1123#0" expanded="true" />
-            <element signature="e#1547#1553#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="551">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/airline_new/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="247">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
-            <element signature="e#376#382#0" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/airline_new/static/css/airline_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        <state relative-caret-position="380">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
         </state>
       </provider>
     </entry>

@@ -3,15 +3,40 @@
 
 
 .home {
-    font-family: Courier;
+    font-family: Papyrus;
     font-size: 50px;
-    color: darkblue;
+    color: whitesmoke;
     text-align: center;
+    background-color: #132554;
+}
+
+.home_body{
+    background-color: #132554;
+}
+
+.title {
+    font-family: Papyrus;
+    font-size: 20;
+    text-align: left;
+    background-color: #D5E4FF;
+    overflow: visible;
+    outline: black;
+
+}
+
+.button {
+    font: 24px "Liberation Sans";
+    text-decoration: none;
+    background-color: #D5E4FF;
+    color: #132554;
+    padding: 3px 9px 3px 9px;
+    border: 1px solid #7CABF5;
+    alignment: center;
 }
 
 
 body{
-    background-color: lightblue;
+    background-color: #D5E4FF;
 }
 
 form {
@@ -21,9 +46,18 @@ form {
 }
 
 h1{
-    font-family: Papyrus;
+    font-family: "Franklin Gothic Demi";
 }
 
-image {
-
+h2{
+    font-family: "Franklin Gothic Demi";
 }
+
+h3{
+    font-family: "Franklin Gothic Demi";
+}
+
+h4{
+    font-family: "Franklin Gothic Demi";
+}
+
