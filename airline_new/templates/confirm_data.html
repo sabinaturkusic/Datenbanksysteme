@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action = "{{ url_for('book_flight') }}" method = "POST">
+        <h1> Bitte überprüfen Sie Ihre Daten! </h1>
+            <h2> Personendaten</h2>
+                <p>Vorname: &nbsp;{{ firstName }}&nbsp;&nbsp;&nbsp;&nbsp;
+                    Nachname: &nbsp;{{ lastName }}<br><br>
+                    Addresse: &nbsp;{{ address }}&nbsp;&nbsp;&nbsp;&nbsp;
+                    Postleitzahl: &nbsp;{{ postCode }} &nbsp;&nbsp;&nbsp;&nbsp;
+                    Ort: &nbsp;{{ location }}<br><br>
+                    E-Mail: &nbsp;{{ mailAddress }} &nbsp;&nbsp;&nbsp;&nbsp;
+                    Telefonnummer: &nbsp;{{ prefix }} {{ phoneNumber }}<br><br></p>
+
+            <h2> Flugdaten </h2>
+                <p>
+                    Flugnummer: {{flight.FlightNumber}} &nbsp;&nbsp;&nbsp;&nbsp;
+                    Abflughafen: {{flight.DepartureAirport}} &nbsp;&nbsp;&nbsp;&nbsp;
+                    Zielflughafen: {{flight.TargetAirport}}<br><br>
+                    Flugdatum: {{flight.Date}}&nbsp;&nbsp;&nbsp;&nbsp;
+                    Abflugzeit: {{flight.DepartureTime}}&nbsp;&nbsp;&nbsp;&nbsp;
+                    Ankunftzeit: {{flight.ArrivalTime}}<br><br>
+                    Preis: {{flight.Price}} € <br><br><br> </p>
+
+        <input type="checkbox" value="Confirm Data" required> Daten bestätigen!<br>
+        <br>
+        <input type="submit" value="Buchen!" >
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>get_flight</title>
+</head>
+<body>
+    {% if flights == [] %}
+    <h1> Zu Ihrer Anfrage: </h1>
+        <h2>{{departureAirport}} → {{targetAirport}}
+        <br> am {{flightDate}}
+        <br> für {{passengerNumber}} Personen </h2>
+        <h2>konnten leider keine passenden Flüge gefunden werden </h2>
+            <h2> <a href="/search_flight">Zurück</a> </h2>
+
+    {% else %}
+    <h1>Vorgeschagene Flüge</h1>
+         <form action = "{{ url_for('passenger_data') }}" method = "POST">
+     <ul>
+        {%for flight in flights%}
+
+            <p>
+                Flugnummer: {{flight.FlightNumber}}&nbsp;&nbsp;&nbsp;&nbsp;
+                Abflughafen: {{flight.DepartureAirport}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Zielflughafen: {{flight.TargetAirport}}</br></br>
+                Flugdatum: {{flight.Date}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Abflugzeit: {{flight.DepartureTime}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Ankunftzeit: {{flight.ArrivalTime}}</br>
+            </p>
+         <h2><input type='radio' name="FlightNumber" value={{ flight.FlightNumber}} required> Preis: {{ flight.Price}} €</h2>
+            </p></br>
+
+
+        {%endfor%}
+    </ul>
+    <input type="submit" value="Flug wählen">
+
+
+    {% endif %}
+    </form>
+
+
+</body>
+</html>
+

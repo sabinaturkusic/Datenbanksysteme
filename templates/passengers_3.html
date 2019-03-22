@@ -15,14 +15,48 @@
         <h1 class="title">Genome Air</h1>
     </div>
     <div>
-        <section>
-
+        <!--from-to - select airport from dropdown - interaction with DATABASE-->
+        <section class="from-to">
+            <!--with method POST, submit to chosen page-->
+            <div class="bootstrap-iso">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <br/>
+                            <form action="confirmation_4.html" method="GET">
+                                    <label for="selectSex">Depart from: </label>
+                                    <select id="selectSex" name="selectSex" required>
+                                        <option value="female">Female</option>
+                                        <option value="male">Male</option>
+                                    </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
+            <section class="from-to">
+                <!--with method POST, submit to chosen page-->
+                <div class="bootstrap-iso">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <form>
+                                <label for="firstName">First Name</label>
+                                <input type="text" name="firstName" id="firstName" required>
+                                <label for="lastName">First Name</label>
+                                <input type="text" name="lastName" id="lastName" style="position: absolute; right: 0;" required>
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <div>
         <footer class="footer">
             <p>&copy; Genome Air 2019</p>
         </footer>
+    </div>
     </div>
 </body>
 </html>

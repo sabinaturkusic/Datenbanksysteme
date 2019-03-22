@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Genome Air - Please choose a date</title>
+    <link href="http://localhost:5000/genome_air.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+</head>
+
+<body>
+<!--div for header-->
+<div>
+    <h1 class="title">Genome Air</h1>
+</div>
+<div>
+    <!--from-to - select airport from dropdown - interaction with DATABASE-->
+    <section class="from-to">
+        <!--with method POST, submit to chosen page-->
+        <div class="bootstrap-iso">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <br/>
+                        <form action="{{ url_for('get_flight') }}" method="POST">
+                            <label for="targetAirport">Destination: </label>
+                            <select id="targetAirport" name="targetAirport" required>
+                                <option value="vienna">VIE</option>
+                                <option value="madrid">MAD</option>
+                            </select>
+                            <!--<label for="returnAirport">Arrive to: </label>
+                            <select id="returnAirport" name="returnAirport" required>
+                                <option value="vienna">VIE</option>
+                                <option value="madrid">MAD</option>
+                            </select>-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--<form action = "{{ url_for('get_flight') }}" method = "POST">
+
+    Destination
+    <input type="text" name="targetAirport"/></br>-->
+
+    <!--Date-->
+    <section class="chooseDate">
+        <div class="bootstrap-iso">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <!--<form action="#choose_out_flight" method="GET">-->
+                        <form action="{{ url_for('get_flight') }}" method="POST">
+                            <div class="form-group"> <!-- Date input -->
+                                <label class="control-label" for="departDate">Date of departure: </label>
+                                <input class="form-control" id="departDate" name="flightDate" required placeholder="MM/DD/YYY" type="date"/>
+                            </div>
+                            <!--<div class="form-group">--> <!-- Date input -->
+                                <!--<label class="control-label" for="returnDate">Date of return: </label>
+                                <input class="form-control" id="returnDate" name="returnDate"  required placeholder="MM/DD/YYY" type="date"/></div>-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<input type="date" name="flightDate"/></br>-->
+
+    <!--<input type = "submit" value = "submit" /><br>
+</form>-->
+    <section class="startSearch">
+        <div class="bootstrap-iso">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <form action="{{ url_for('get_flight') }}" method="POST">
+                            <div class="form-group"> <!-- Submit button -->
+                                <button class="btn btn-primary " name="submit" type="submit" formtarget="_self">Search flight</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div>
+    <footer class="footer">
+        <p>&copy; Genome Air 2019</p>
+    </footer>
+</div>
+
+</body>
+</html>
