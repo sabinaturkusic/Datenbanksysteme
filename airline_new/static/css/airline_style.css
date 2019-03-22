@@ -1,63 +1,107 @@
-/*#company {
-    font-family: Courier; */
-
-
-.home {
-    font-family: Papyrus;
+/*home.html*/
+/*h1 with class="home"*/
+h1.home {
+    font-family: 'Baloo Chettan', cursive;
     font-size: 50px;
-    color: whitesmoke;
+    color: ghostwhite;
     text-align: center;
-    background-color: #132554;
 }
 
-.home_body{
-    background-color: #132554;
+/*h2 heading in thank you for booking page*/
+h2.home {
+    font-family: 'Dosis-Medium', sans-serif;
+    font-size: 15px;
+    color: ghostwhite;
+    text-align: center;
 }
 
+/*body from home.html with class="home_body"*/
+.home-body{
+    background-color: #0B0030;
+}
+
+/*footer on home.html and book_flight.html - start and end*/
+.footer-home {
+    color: ghostwhite;
+    font-size: 12px;
+}
+
+.footer {
+    color: #0B0030;
+    font-size: 12px;
+}
+
+/*title in header "GenomeAir"*/
 .title {
-    font-family: Papyrus;
-    font-size: 20;
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 40px;
     text-align: left;
-    background-color: #D5E4FF;
-    overflow: visible;
-    outline: black;
+    background-color: #0B0030;
+    overflow: hidden;
+    padding: 1em;
+    margin: 0;
+    display: block;
 
 }
 
-.button {
-    font: 24px "Liberation Sans";
+/*logo on right site of company name*/
+img{
+    float: left;
+}
+
+/*define text in header*/
+#title-text {
+    color:ghostwhite;
+    float: left;
+}
+
+
+#button {
+    font-family: 'Dosis-Medium', sans-serif;
+    font-size: 24px;
     text-decoration: none;
-    background-color: #D5E4FF;
-    color: #132554;
+    background-color: #D7E5FF;
+    color: #0B0030;
     padding: 3px 9px 3px 9px;
-    border: 1px solid #7CABF5;
-    alignment: center;
+    border: 1px solid ghostwhite;
+    align-content: center;
 }
 
-
-body{
-    background-color: #D5E4FF;
-}
-
-form {
-    font-size: 20px;
-    font-family: "Franklin Gothic Demi";
-    color: black;
-}
-
+/*define font of all headings*/
 h1{
-    font-family: "Franklin Gothic Demi";
+    font-family: 'Dosis-Medium', sans-serif;
+    font-size: 18px;
+    /*color: #0B0030;*/
 }
+
 
 h2{
-    font-family: "Franklin Gothic Demi";
+    font-family: 'Dosis-Medium', sans-serif;
+    font-size: 15px;
+    color: #0B0030;
 }
 
 h3{
-    font-family: "Franklin Gothic Demi";
+    font-family: 'Dosis-Medium', sans-serif;
+    font-size: 12px;
+    color: #0B0030;
 }
 
 h4{
-    font-family: "Franklin Gothic Demi";
+    font-family: 'Dosis-Medium', sans-serif;
+    font-size: 11px;
+    color: #0B0030;
 }
+
+/*define forms*/
+form {
+    font-size: 15px;
+    font-family: 'Dosis-Medium', sans-serif;
+    color: #0B0030;
+}
+
+/*body{
+    background-color: #D5E4FF;
+}*/
+
 

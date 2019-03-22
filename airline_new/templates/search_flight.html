@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <link href="./static/css/airline_style.css" type="text/css" rel="stylesheet">
-    <title>GenomeAir - search flight</title>
+    <title>GenomeAir - Please search for flights!</title>
 </head>
 
 <body>
-<div>
-    <h1 class="title">Genome Air</h1>
-</div>
-<h2> Wählen Sie Ihren Flug!</h2>
+    <div class="title">
+        <!--title in header-->
+        <p id="title-text">Genome Air</p>
+        <img src="/static/css/logo.png" width="80" height="80">
+    </div>
+
+    <h2> Wählen Sie Ihren Flug!</h2>
     <form action = "{{ url_for('get_flight') }}" method = "POST">
 
        <p>
@@ -28,9 +31,10 @@
 
        </p>
 
-         <input type = "submit" value = "submit" /></br><br>
+         <input type = "submit" value = "Flüge suchen" /></br><br>
       </form>
     <div>
+        <!--company-->
         <footer class="footer">
             <p>&copy; GenomeAir 2019</p>
         </footer>

@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link href="./static/css/airline_style.css" type="text/css" rel="stylesheet">
-    <title>GenomeAir - pick flight</title>
+    <title>GenomeAir - Please select a flight!</title>
 </head>
+
 <body>
+    <div>
+        <!--title in header-->
+        <h1 class="title">Genome Air</h1>
+    </div>
+
     {% if flights == [] %}
     <h1> Zu Ihrer Anfrage: </h1>
         <h2>{{departureAirport}} → {{targetAirport}}
@@ -20,31 +26,31 @@
      <ul>
         {%for flight in flights%}
 
-            <p>
                 Flugnummer: {{flight.FlightNumber}}&nbsp;&nbsp;&nbsp;&nbsp;
                 Abflughafen: {{flight.DepartureAirport}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Zielflughafen: {{flight.TargetAirport}}</br></br>
                 Flugdatum: {{flight.Date}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Abflugzeit: {{flight.DepartureTime}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Ankunftzeit: {{flight.ArrivalTime}}</br>
-            </p>
+
          <h2><input type='radio' name="FlightNumber" value={{ flight.FlightNumber}} required> Preis: {{ flight.Price}} €</h2>
-            </p></br>
+            </br>
 
 
         {%endfor%}
     </ul>
-    <input type="submit" value="Flug wählen">
+    <input type="submit" value="Fortfahren">
 
 
     {% endif %}
     </form>
+
     <div>
+        <!--company-->
         <footer class="footer">
             <p>&copy; GenomeAir 2019</p>
         </footer>
     </div>
-
 </body>
 </html>
 
