@@ -1,10 +1,11 @@
 /*home.html*/
 /*h1 with class="home"*/
-h1.home {
+#home {
     font-family: 'Baloo Chettan', cursive;
     font-size: 50px;
     color: ghostwhite;
     text-align: center;
+    float: left;
 }
 
 /*h2 heading in thank you for booking page*/
@@ -18,11 +19,21 @@ h2.home {
 /*body from home.html with class="home_body"*/
 .home-body{
     background-color: #0B0030;
+    overflow: hidden;
+    padding: 1em;
+    margin: 0;
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 40px;
+    text-align: left;
+    overflow: hidden;
+    padding: 0.5em;
+    margin: 0;
+    display: block;
 }
 
 /*footer on home.html and book_flight.html - start and end*/
 .footer-home {
-    color: ghostwhite;
+    color: #0B0030;
     font-size: 12px;
 }
 
@@ -80,6 +91,7 @@ h2{
     font-size: 15px;
     color: #0B0030;
 }
+
 
 h3{
     font-family: 'Dosis-Medium', sans-serif;
